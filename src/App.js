@@ -4,6 +4,7 @@ import Footer from "./Components/Footer/footer";
 import Home from "./Components/Home/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./Components/Login/Login";
+// chama o UseStorage pra poder colcoar o contexto em tudo
 import { UserStorage } from "./UserContext";
 
 function App() {
