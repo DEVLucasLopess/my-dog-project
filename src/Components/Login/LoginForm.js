@@ -43,7 +43,9 @@ const LoginForm = () => {
           <Link className={styles.buttonCriar}>aqui!</Link>
         </p>
       </div>
-      <Link to="/login/criar">Cadastro</Link>
+      <Link to="/login/criar" className={styles.button}>
+        Cadastro
+      </Link>
       <Error error={error} />
     </section>
   );
