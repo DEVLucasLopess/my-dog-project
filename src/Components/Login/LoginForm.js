@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import useForm from "../../Hooks/useForm";
 import Input from "../Forms/Input";
 import { UserContext } from "../../UserContext";
+import Error from "../../Components/Helper/Error";
+import styles from "./LoginForm.module.css";
 
 const LoginForm = () => {
   const username = useForm();
@@ -20,9 +22,9 @@ const LoginForm = () => {
   }
 
   return (
-    <section>
-      <h1>Login</h1>
-      <form action="" onSubmit={handleSubmit}>
+    <section className="animeLeft">
+      <h1 className="title">Login</h1>
+      <form className={styles.form} onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" name="username" {...username} />
         <Input label="Senha" type="password" name="password" {...password} />
         {loading ? (
@@ -31,8 +33,18 @@ const LoginForm = () => {
           <button>Entrar</button>
         )}
       </form>
+      <Link className={styles.perdeu} to="/login/perdeu">
+        Recuperar senha
+      </Link>
+      <div className={styles.cadastro}>
+        <h2 className={styles.subtitle}>Cadastre-se</h2>
+        <p>
+          Ainda não possu conta? cadastre-se
+          <Link className={styles.buttonCriar}>aqui!</Link>
+        </p>
+      </div>
       <Link to="/login/criar">Cadastro</Link>
-      {error && <p>{error}</p>}
+      <Error error={error} />
     </section>
   );
 };

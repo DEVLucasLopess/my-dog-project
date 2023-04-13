@@ -9,7 +9,7 @@ body {
   margin: 0px;
   color: #333;
   --type-first: Helvetica, Arial, sans-serif;
-  --type-second: 'Spectral', Georgia;
+  --type-second: 'Spectral', georgia;
   font-family: var(--type-first);
 }
 
@@ -49,6 +49,7 @@ input {
 
 a {
   text-decoration: none;
+  color: #333;
 }
 
 button {
@@ -73,4 +74,38 @@ button:focus {
 button:disabled {
   opacity: 0.5;
   cursor: wait;
+}
+
+.animeLeft {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: animeLeft .3s forwards;
+}
+
+@keyframes animeLeft {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+.title {
+  font-family: var(--type-second);
+  line-height: 1;
+  font-size: 3rem;
+  margin: 1rem;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #fb1;
+  position: absolute;
+  bottom: 5px;
+  left: -5px;
+  border-radius: 0.2rem;
+  z-index: -1;
 }

@@ -22,7 +22,6 @@ const Header = () => {
             Login / Criar  
           </Link>
         )}
-        <button></button>
       </nav>
     </header>
   );
