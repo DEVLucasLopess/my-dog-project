@@ -6,6 +6,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./Components/Login/Login";
 // chama o UseStorage pra poder colcoar o contexto em tudo
 import { UserStorage } from "./UserContext";
+import User from "./Components/User/user";
+import ProtectedRoute from "./Components/Helper/ProtectedRoute";
 
 function App() {
   return (
@@ -15,7 +17,15 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/login/*" element={<Login />} />
+            <Route path="login/*" element={<Login />} />
+            <Route
+              path="conta/*"
+              element={
+                <ProtectedRoute>
+                  <User />
+                </ProtectedRoute>
+              }
+            />
           </Routes>
           <Footer />
         </UserStorage>
