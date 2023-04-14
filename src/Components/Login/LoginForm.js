@@ -40,12 +40,12 @@ const LoginForm = () => {
         <h2 className={styles.subtitle}>Cadastre-se</h2>
         <p>
           Ainda não possu conta? cadastre-se
-          <Link className={styles.buttonCriar}>aqui!</Link>
+          <Link className={styles.button} to="/login/criar">
+            {" "}
+            aqui!
+          </Link>
         </p>
       </div>
-      <Link to="/login/criar" className={styles.button}>
-        Cadastro
-      </Link>
       <Error error={error} />
     </section>
   );
