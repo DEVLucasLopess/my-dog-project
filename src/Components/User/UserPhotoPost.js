@@ -16,12 +16,10 @@ const UserPhotoPost = () => {
     event.preventDefault();
     //Tem que ter o formData porquê vamos enviar uma imagem
     const formData = new FormData();
-    formData.append('img', img.raw);
-    formData.append('nome', nome.value);
-    formData.append('peso', peso.value);
-    formData.append('idade', idade.value);
-
-    console.log("dentro do form data:", formData)
+    formData.append("img", img.raw);
+    formData.append("nome", nome.value);
+    formData.append("peso", peso.value);
+    formData.append("idade", idade.value);
 
     const token = window.localStorage.getItem("token");
     const { url, options } = PHOTO_POST(formData, token);
@@ -40,7 +38,12 @@ const UserPhotoPost = () => {
         <Input label="Nome" type="text" name="nome" {...nome} />
         <Input label="Peso" type="number" name="peso" {...peso} />
         <Input label="Idade" type="number" name="idade" {...idade} />
-        <input type="file" name="img" id="img" onChange={handleImgChange}></input>
+        <input
+          type="file"
+          name="img"
+          id="img"
+          onChange={handleImgChange}
+        ></input>
         <button>Enviar</button>
       </form>
     </section>
