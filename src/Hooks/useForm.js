@@ -9,6 +9,10 @@ const types = {
     regex: /^(?=.*[a-z])(?=.*[A-Z])[A-Za-z]{3,}$/,
     message: 'A senha precisa 1 caracter maíusculo, 1 caracter minúsculo e 3 digitos',
   },
+  number: {
+    regex: /^\d+$/,
+    message: 'Apenas números'
+  }
 };
 
 const useForm = (type) => {

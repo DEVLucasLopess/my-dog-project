@@ -81,9 +81,18 @@
     border-radius: .2rem;
     transform: translateX(-10px);
     opacity: 0;
+    pointer-events: none;
 }
 
-.navMobile a,
+.navMobileActiver {
+    transition: 0.3s;
+    transform:  initial;
+    pointer-events: initial;
+    opacity: 1;
+    z-index: 100;
+}
+
+.navMobile a, 
 .navMobile button {
     display: flex;
     align-items: center;
@@ -93,4 +102,17 @@
     border-bottom: 1px solid #eee;
     padding: 0.5rem 0;
     cursor: pointer;
+}
+
+.navMobile a:hover svg > *,
+.navMobile button:hover > * {
+    fill: #fb1;
+}
+
+.navMobile button {
+    border-radius: none;
+}
+
+.navMobile svg {
+    margin-right: 0.5rem;
 }

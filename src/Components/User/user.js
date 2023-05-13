@@ -2,7 +2,7 @@ import React from "react";
 import UserHeader from "./UserHeader";
 import { Routes, Route } from "react-router-dom";
 import Feed from "../Feed/Feed";
-import UserPhotoPost from "./UserPhotoPost";
+import UserPhotoPost from "../User/UserPhotoPost";
 import UserStats from "./UserStats";
 
 const User = () => {
@@ -11,8 +11,8 @@ const User = () => {
       <UserHeader />
       <Routes>
         <Route path="/" element={<Feed /> }/>
-        <Route path="postar" element={<UserPhotoPost /> }/>
-        <Route path="estatisticas" element={<UserStats /> }/>
+        <Route path="/conta/postar" element={<UserPhotoPost /> } />
+        <Route path="/conta/estatisticas" element={<UserStats /> }/>
       </Routes>
     </section>
   );
