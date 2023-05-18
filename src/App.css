@@ -73,7 +73,7 @@ button {
 button:hover,
 button:focus {
   outline: none;
-  box-shadow: 0 0 0 3px #fea, 0 0 0 4px #fb1;
+  /* box-shadow: 0 0 0 3px #fea, 0 0 0 4px #fb1; */
 }
 
 button:disabled {
