@@ -11,7 +11,7 @@ const FeedPhotos = ({ page, user, setModalPhoto, setInfinite }) => {
 
   useEffect(() => {
     async function fetchPhotos() {
-      const total = 3;
+      const total = 9;
       const { url, options } = PHOTOS_GET({ page, total, user });
       const {json, response } = await request(url, options);
       console.log(json)
