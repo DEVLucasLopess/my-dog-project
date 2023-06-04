@@ -11,6 +11,9 @@ body {
   --type-first: Helvetica, Arial, sans-serif;
   --type-second: 'Spectral', georgia;
   font-family: var(--type-first);
+  background-image: url("Assets/BG.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1,
@@ -123,4 +126,8 @@ button:disabled {
 
 .AppBody {
   flex: 1
+}
+
+.victoryContainer {
+  height: initial !important;
 }

@@ -47,7 +47,7 @@ const LoginForm = () => {
           </Link>
         </p>
       </div>
-      <Error error={error} />
+      <Error error={error && 'Dados incorretos.'} />
     </section>
   );
 };
